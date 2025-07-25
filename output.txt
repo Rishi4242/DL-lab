@@ -1,0 +1,46 @@
+EXPERIMENT-2
+No of neurons in layer: 10
+activation function: softmax
+optimizer : sgd,SQD ,adam
+Loss function: categorical_crossentropy
+metrics: accuracy
+epochs :30
+batch_size: 32
+
+validation_data: (x_test,y_test)
+
+
+
+
+PS C:\Users\SRI LAXMI DOCUMENT\Desktop\rishi\DL-lab> python -u "c:\Users\SRI LAXMI DOCUMENT\Desktop\rishi\DL-lab\MLP.py"
+2025-07-25 21:09:02.421207: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-25 21:09:03.482878: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Users\SRI LAXMI DOCUMENT\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\layers\reshaping\flatten.py:37: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.     
+  super().__init__(**kwargs)
+2025-07-25 21:09:10.522248: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Epoch 1/10
+   1/1875 ━━━━━━━━━━━━━━━━━━━━ 15:45 504ms/step - accuracy: 0.0312 - loss: 2.45  19/1875 ━━━━━━━━━━━━━━━━━━━━ 5s 3ms/step - accuracy: 0.0768 - loss: 2.3317   
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.7144 - loss: 1.1276 - val_accuracy: 0.8805 - val_loss: 0.4774
+Epoch 2/10
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.8775 - loss: 0.4752 - val_accuracy: 0.8946 - val_loss: 0.3986
+Epoch 3/10
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.8885 - loss: 0.4149 - val_accuracy: 0.9010 - val_loss: 0.3668
+Epoch 4/10
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.8981 - loss: 0.3782 - val_accuracy: 0.9059 - val_loss: 0.3476
+Epoch 5/10
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.9039 - loss: 0.3562 - val_accuracy: 0.9088 - val_loss: 0.3351
+Epoch 6/10
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.9012 - loss: 0.3515 - val_accuracy: 0.9115 - val_loss: 0.3261
+Epoch 7/10
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.9051 - loss: 0.3358 - val_accuracy: 0.9126 - val_loss: 0.3196
+Epoch 8/10
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.9069 - loss: 0.3355 - val_accuracy: 0.9154 - val_loss: 0.3133
+Epoch 9/10
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.9092 - loss: 0.3297 - val_accuracy: 0.9166 - val_loss: 0.3091
+Epoch 10/10
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.9103 - loss: 0.3216 - val_accuracy: 0.9166 - val_loss: 0.3054
+313/313 ━━━━━━━━━━━━━━━━━━━━ 1s 3ms/step - accuracy: 0.9039 - loss: 0.3491  
+
+Test loss:0.3054160177707672,
+Test Accuracy:0.9165999889373779
