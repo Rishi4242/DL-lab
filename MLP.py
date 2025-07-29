@@ -13,7 +13,7 @@ x_train = x_train / 255.0
 x_test = x_test / 255.0
 # print(f"x_train.shape:{x_train.shape}\n")
 # plt.imshow(x_train[0])
-# plt.show()
+# plt.show()ubjb
 
 
 #Preprocessing 
