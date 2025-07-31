@@ -26,12 +26,12 @@ result=model.fit(X,y,epochs=50)#first take 1 as epochs and next take 10 like wis
 predict=model.predict(X)
 
 #Visualization
-# plt.scatter(X,y,label="original data",color='blue')
-plt.plot(result.history['loss'])
-# plt.plot(X,predict,label='Predcitions',color='red')
+plt.scatter(X,y,label="original data",color='blue')
+# plt.plot(result.history['loss'])
+plt.plot(X,predict,label='Predcitions',color='red')
 plt.xlabel("X")
 plt.ylabel("y")
-# plt.legend()
-plt.title("Loss Over Epochs")
+plt.legend()
+plt.title("optimizer :adam")
 plt.show()
 

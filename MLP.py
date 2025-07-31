@@ -7,13 +7,14 @@ from keras.utils import to_categorical
 import matplotlib.pyplot as plt
 
 
+
 #Load data
 (x_train,y_train),(x_test,y_test)=mnist.load_data()
 x_train = x_train / 255.0
 x_test = x_test / 255.0
 # print(f"x_train.shape:{x_train.shape}\n")
 # plt.imshow(x_train[0])
-# plt.show()ubjb
+# plt.show()
 
 
 #Preprocessing 
@@ -32,7 +33,7 @@ model.add(Dense(units=10,activation='softmax'))
 
 
 #Compile
-model.compile(optimizer='sgd',loss='categorical_crossentropy',metrics=['accuracy'])
+model.compile(optimizer=SGD(learning_rate=0.0001),loss='categorical_crossentropy',metrics=['accuracy'])
 
 
 #Build the model 
@@ -42,7 +43,7 @@ res=model.fit(x_train,y_train,epochs=10,batch_size=32,validation_data=(x_test,y_
 
 #Evaluate
 loss,accuracy=model.evaluate(x_test,y_test)
-print(f"\nTest loss:{loss},\nTest Accuracy:{accuracy}\n")
+print(f"\nTest loss:{loss},\n Test Accuracy:{accuracy}\n")
 
 
 # #Visualization
@@ -51,8 +52,9 @@ plt.plot(res.history['val_loss'],label="Validation Loss",color="red")
 plt.xlabel("Epochs")
 plt.ylabel("Loss")
 plt.legend()
-plt.title("E vs L")
+plt.title("Optimizer:SGD(learning_rate=0.0001) Epochs vs Loss")
 plt.show()
+ 
 
 
 # #Visualization
@@ -61,5 +63,5 @@ plt.plot(res.history['val_accuracy'],label="Validation Accuracy",color="red")
 plt.xlabel("Epochs")
 plt.ylabel("Accuracy")
 plt.legend()
-plt.title("E vs A")
+plt.title("Optimizer:SGD(learning_rate=0.0001) Epochs vs Accuracy")
 plt.show()
