@@ -1,0 +1,24 @@
+# Ignore everything
+*
+
+# But not these files...
+!*.py
+!*.ipynb
+
+# Don't ignore the .gitignore file itself
+!.gitignore
+
+# Ignore virtual environment
+venv/
+
+# Ignore dataset and compressed files
+*.tar.gz
+*.zip
+*.rar
+
+# Ignore text files
+*.txt
+
+# Ignore Python cache
+__pycache__/
+*.pyc
